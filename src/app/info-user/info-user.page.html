@@ -1,9 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>InfoUser</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Perfil de usuario</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content padding>
+  <div class="col-sm-12">
+      <p id = "perfin_name">Perfil de usuario</p>
+      <span><p>{{user.name}}</p></span>
+      <span><p>{{user.cc_user}}</p></span>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+        <ion-img id="image_perfil" [(src)]="image_user"></ion-img>
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+  
 
 </ion-content>
