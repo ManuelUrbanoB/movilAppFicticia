@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      App Fictica
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Inicio de sesión</ion-card-subtitle>
+      <ion-card-title>Por favor digite su usuario y contraseña</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-list>
+          <ion-item>
+              <ion-input   placeholder="Usuario" [(ngModel)] = "email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input  placeholder="Contraseña"></ion-input>  
+          </ion-item>
+          <ion-item>
+              <ion-input   placeholder="Success" [(ngModel)] = "success"></ion-input>
+          </ion-item>
+          <ion-item>
+              <button ion-button full (click)="userLogin()" >Iniciar sesión</button>
+          </ion-item>
+        </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
