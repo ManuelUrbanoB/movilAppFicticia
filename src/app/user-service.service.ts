@@ -19,6 +19,6 @@ export class UserServiceService {
    checkLoginUser(email:String, password:String){
     
     let user = new UserLogin(email, password);
-     return this.http.post<UserResponse>("http://192.168.1.50:8080/webApp/public/api/user/login",user, httpOptions);
+     return this.http.post<UserResponse>("http://localhost:8080/webApp/public/api/user/login",user, httpOptions);
    }
 }

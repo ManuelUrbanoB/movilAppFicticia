@@ -20,7 +20,6 @@ export class InfoUserPage implements OnInit {
     this.sub = this.route
     .queryParams
     .subscribe(params => {
-      console.log(params);
       this.user = params as User
       this.image_user = this.user.url_img
       console.log(this.user)

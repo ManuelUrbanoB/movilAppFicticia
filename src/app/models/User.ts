@@ -18,6 +18,8 @@ export class User {
     url_img:String;
     cel_phone:String;
     email_verified_at:String;
+    boss_name:String;
+    boss_role:String;
     created_at:String;
     updated_at:String;
 }
