@@ -11,7 +11,7 @@ export class HomePage {
   password:String;
   
   success:Boolean;
-  usuario
+  usuario;
   constructor(public userService:UserServiceService){
 
   }
@@ -19,10 +19,11 @@ export class HomePage {
     this.userService.checkLoginUser(this.email,this.password).subscribe(
       (data)=>{
           this.usuario = data;
-          console.log(data);
+          
       },
-      (error) => {console.log(error)}
+      (error) => {
+        alert("Error con conexión al servidor");
+      }
     );
-    console.log(this.email);
   }
 }
