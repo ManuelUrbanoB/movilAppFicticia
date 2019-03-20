@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Perfil sub alterno</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <div>
+      <p id="perfin_name">Perfil de usuario</p>
+      <span>
+        <p id="name_user"> {{user.last_name_one}} {{user.last_name_two}} {{user.name}}</p>
+      </span>
+      <span>
+        <p id="identification_user">{{user.employee_number}}</p>
+      </span>
+    </div>
+    <div class="info-user">
+      <div class="child-user">
+        <ion-img id="image_perfil" [(src)]="image_user"></ion-img>
+      </div>
+      <div class="child-user child-user-detail">
+        <p>{{user.role}}</p>
+        <p>{{user.zone}}</p>
+        <p id="ubication_user">{{user.department}},{{user.municipality}}</p>
+        <p id="sales_user_detail">{{user.sales}}</p>
+      </div>
+    </div>
+    <div class="more-info-user">
+      <p>
+        <span class="span-more-info-user">Telefono: </span>{{user.cel_phone}}</p>
+      <p>
+        <span class="span-more-info-user">Email: </span>{{user.email}}</p>
+      <p>
+        <span class="span-more-info-user">Fecha nacimiento: </span>{{user.bord_date}}</p>
+      <p>
+        <span class="span-more-info-user">Cedula: </span>{{user.cc_user}}</p>
+      <p>
+        <span class="span-more-info-user">Fecha ingreso: </span>{{user.entry_date}}</p>
+      <p *ngIf="user.boss_name != ''">
+        <span class="span-more-info-user">Jefe: </span>{{user.boss_name}} </p>
+    </div>
+    <div>
+      <span>Sub alernos</span>
+      <ion-list padding *ngFor="let userSub of subalernts">
+          <ion-item>
+            <span>Nombre</span>
+            <span style="margin-left: 5em">Ventas</span>
+          </ion-item>
+        <ion-item>
+          <a (click)="goToSubAlter(userSub)"> {{userSub.name}} {{userSub.last_name_one}} </a>
+          <span style="margin-left: 5em"> {{userSub.sales}}</span>
+          
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
